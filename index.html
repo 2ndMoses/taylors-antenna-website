@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional antenna installation services for free-to-air TV and digital reception. Expert technicians, quality equipment, competitive prices.">
+    <meta name="keywords" content="antenna installation, TV antenna, digital antenna, free to air TV, antenna repair, TV reception">
+    <title>Taylors Antenna Service - Professional Antenna Installation | taylorsantennas.com.au</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: "📡";
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ecf0f1;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(25, 42, 86, 0.7), rgba(244, 125, 72, 0.5)), 
+                        url('images/header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(25, 42, 86, 0.3), rgba(244, 125, 72, 0.2));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-placeholder {
+            background: #ecf0f1;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background: #ecf0f1;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+
+        /* Contact */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ecf0f1;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .submit-button {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #2980b9;
+        }
+
+        .contact-info {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #2c3e50;
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        /* Background patterns */
+        #services {
+            background: #f8f9fa;
+        }
+
+        #about {
+            background: white;
+        }
+
+        #gallery {
+            background: #f8f9fa;
+        }
+
+        #contact {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Taylors Antenna Service</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Antenna Installation</h1>
+                <p>Get perfect reception today with Taylors Antenna Service. Professional workmanship to the highest standard, guaranteed work, fair rates. Local business serving the community with care.</p>
+                <a href="#contact" class="cta-button">Get Perfect Reception Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📡</div>
+                    <h3>TV Antenna Installation</h3>
+                    <p>Professional installation of digital TV antennas for optimal free-to-air reception. We ensure perfect positioning for maximum signal strength and crystal clear viewing.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Reception Diagnosis and Repairs</h3>
+                    <p>Expert diagnosis of reception problems and professional repairs. From storm damage to signal issues, we'll restore your perfect reception quickly and reliably.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛰️</div>
+                    <h3>Starlink Installation and Setup</h3>
+                    <p>Professional Starlink satellite internet installation and configuration. Get high-speed internet anywhere with our expert setup and optimization service.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📺</div>
+                    <h3>Satellite TV - Vast/Foxtel</h3>
+                    <p>Complete satellite TV installation for Vast and Foxtel services. Professional dish alignment and receiver setup for reliable satellite television reception.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📶</div>
+                    <h3>Signal Testing & Optimization</h3>
+                    <p>Comprehensive signal analysis using professional equipment. We optimize your reception for the best possible viewing experience at your location.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Ongoing maintenance and support services to keep your antenna systems performing perfectly. All work guaranteed for years to come.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <div class="gallery-grid">
+                <!-- Replace these placeholders with your actual images -->
+                
+                <!-- Example of how to add your photos: -->
+                <!-- <div class="gallery-item">
+                    <img src="images/antenna-install-1.jpg" alt="TV Antenna Installation on Roof">
+                </div> -->
+                
+                <!-- Until you add photos, these placeholders show: -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        TV Antenna Installation<br>
+                        <small>Add: images/antenna-install-1.jpg</small>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        Starlink Setup<br>
+                        <small>Add: images/starlink-install.jpg</small>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        Satellite Dish Install<br>
+                        <small>Add: images/satellite-dish.jpg</small>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        Reception Testing<br>
+                        <small>Add: images/signal-testing.jpg</small>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        Antenna Repair Work<br>
+                        <small>Add: images/antenna-repair.jpg</small>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        Completed Installation<br>
+                        <small>Add: images/completed-work.jpg</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; margin-top: 3rem;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem;">📁 How to Add Your Photos:</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; font-size: 0.9rem;">
+                    <div>
+                        <h5 style="color: #3498db;">Step 1: Create Images Folder</h5>
+                        <p>Create a folder called "images" next to your HTML file</p>
+                        
+                        <h5 style="color: #3498db;">Step 2: Add Your Photos</h5>
+                        <p>Put your JPG files in the images folder:<br>
+                        • antenna-install-1.jpg<br>
+                        • starlink-install.jpg<br>
+                        • satellite-dish.jpg<br>
+                        • etc.</p>
+                    </div>
+                    <div>
+                        <h5 style="color: #3498db;">Step 3: Replace Placeholders</h5>
+                        <p>Replace each placeholder div with:</p>
+                        <code style="background: white; padding: 0.5rem; border-radius: 5px; display: block; margin: 0.5rem 0;">
+                        &lt;div class="gallery-item"&gt;<br>
+                        &nbsp;&nbsp;&lt;img src="images/your-photo.jpg" alt="Description"&gt;<br>
+                        &lt;/div&gt;
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Taylors Antenna Service</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Local Antenna Specialists</h3>
+                    <p>Taylors Antenna Service is your trusted local expert for all antenna and satellite services. We're a local business serving the community with care, providing professional workmanship to the highest standard.</p>
+                    
+                    <p>All our work is guaranteed for years to come, giving you complete peace of mind. We offer fair rates and honest service, with no hidden costs or surprises.</p>
+                    
+                    <p>Whether you need TV antenna installation, Starlink setup, satellite TV, or reception repairs, we're here to help you get perfect reception today.</p>
+                    
+                    <h4>Why Choose Taylors Antenna Service?</h4>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>🏆 Professional workmanship to the highest standard</li>
+                        <li>✅ All work guaranteed for years to come</li>
+                        <li>🏠 Local business serving the community with care</li>
+                        <li>💰 Fair rates - no hidden costs</li>
+                        <li>📞 Call or text anytime - 0421 023 718</li>
+                        <li>⚡ Same-day service available</li>
+                        <li>🛰️ Specialist in Starlink and satellite services</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <!-- Replace this placeholder with your business photo -->
+                    <!-- <img src="images/about-photo.jpg" alt="Taylors Antenna Service Team" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px;"> -->
+                    
+                    <div style="background: #ecf0f1; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #7f8c8d; font-weight: bold; text-align: center;">
+                        Your Business Photo Here<br>
+                        <small>Add: images/about-photo.jpg<br>
+                        (Team photo, van, or work image)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Request a Quote</h3>
+                    <form id="contactForm" action="https://formspree.io/f/xovwbqaa" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Property Address</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Required</label>
+                            <select id="service" name="service" style="width: 100%; padding: 12px; border: 2px solid #ecf0f1; border-radius: 5px;">
+                                <option value="">Select a service</option>
+                                <option value="tv-antenna-installation">TV Antenna Installation</option>
+                                <option value="reception-diagnosis-repairs">Reception Diagnosis and Repairs</option>
+                                <option value="starlink-installation">Starlink Installation and Setup</option>
+                                <option value="satellite-tv-vast-foxtel">Satellite TV - Vast/Foxtel</option>
+                                <option value="signal-testing">Signal Testing & Optimization</option>
+                                <option value="maintenance-support">Maintenance & Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone</strong><br>
+                            <a href="tel:0421023718" style="color: #3498db; text-decoration: none;">0421 023 718</a><br>
+                            <small style="color: #ecf0f1;">Call or Text Anytime</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:taylorsantennas@gmail.com" style="color: #3498db; text-decoration: none;">taylorsantennas@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <div>
+                            <strong>Website</strong><br>
+                            <a href="https://taylorsantennas.com.au" style="color: #3498db; text-decoration: none;">taylorsantennas.com.au</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🏢</span>
+                        <div>
+                            <strong>ABN</strong><br>
+                            27 406 545 129
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Service Area</strong><br>
+                            [Your Service Areas]<br>
+                            Local business serving the community
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕒</span>
+                        <div>
+                            <strong>Availability</strong><br>
+                            Call or text anytime<br>
+                            Same-day service available<br>
+                            Emergency repairs welcome
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">⚡</span>
+                        <div>
+                            <strong>Get Perfect Reception Today</strong><br>
+                            Professional workmanship<br>
+                            All work guaranteed<br>
+                            Fair rates, no hidden costs
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Taylors Antenna Service. All rights reserved. | Professional antenna installation services | ABN: 27 406 545 129</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                Local business serving the community with care | Professional workmanship to the highest standard | All work guaranteed
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const offsetTop = target.offsetTop - 80; // Account for fixed header
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            // Add your form submission logic here
+            // For now, we'll show a simple alert
+            alert('Thank you for your message! We\'ll get back to you soon.');
+        });
+
+        // Gallery item click handling (for adding images later)
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                alert('To add images: Replace this div with an <img> tag pointing to your photo file.\n\nExample:\n<img src="images/antenna-install-1.jpg" alt="Antenna Installation" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">');
+            });
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c3e50, #3498db)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Add some interactive animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and other elements for animations
+        document.querySelectorAll('.service-card, .gallery-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
