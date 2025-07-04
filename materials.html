@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium antenna materials and equipment used by Taylors Antenna Service. Only the highest quality Australian-made antennas and professional components.">
+    <meta name="keywords" content="antenna materials, Hills antennas, Matchmaster, Digitek, premium antenna equipment, Australian antennas">
+    <title>Premium Materials & Equipment - Taylors Antenna Service</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: "📡";
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ecf0f1;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            padding: 5rem 0;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            color: #555;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Equipment Grid */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Antenna Grid */
+        .antenna-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Brand Info */
+        .brand-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 3rem;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .brand-item h4 {
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .brand-item p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        /* Back to Home Button */
+        .back-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #2c3e50;
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .antenna-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Taylors Antenna Service</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="pricing.html">Pricing</a></li>                
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-button">← Back to Home</a>
+            
+            <h1 class="page-title">Premium Materials & Equipment</h1>
+            
+            <div class="intro-text">
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Only the Best Quality for Australian Conditions</h3>
+                <p>At Taylors Antenna Service, we use only the highest quality antennas, amplifiers, cabling, and connections. All our installations feature professionally crimped connections using double bubble waterproof connectors, ensuring your system performs flawlessly in Australia's harsh climate for years to come.</p>
+            </div>
+
+            <!-- Equipment Section -->
+            <section>
+                <h2 class="section-title">Professional Equipment & Components</h2>
+                
+                <div class="equipment-grid">
+                    <div class="service-card">
+                        <div style="width: 100%; height: 120px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="80" height="60" viewBox="0 0 80 60" fill="none">
+                                <!-- F-Type Connector -->
+                                <rect x="10" y="25" width="25" height="10" fill="#3498db" rx="2"/>
+                                <rect x="30" y="27" width="8" height="6" fill="#2980b9"/>
+                                <circle cx="42" cy="30" r="3" fill="#34495e"/>
+                                <!-- Cable -->
+                                <rect x="45" y="28" width="25" height="4" fill="#2c3e50" rx="2"/>
+                                <!-- Waterproof seal -->
+                                <ellipse cx="35" cy="30" rx="4" ry="6" fill="#e74c3c" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <h4>Premium Connections</h4>
+                        <p>All connections are professionally crimped using double bubble waterproof connectors. F-Type connections provide superior screening and maximum reliability in Australian weather conditions.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 120px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="80" height="60" viewBox="0 0 80 60" fill="none">
+                                <!-- Australian flag elements -->
+                                <rect x="10" y="15" width="60" height="30" fill="#012169" rx="2"/>
+                                <rect x="10" y="15" width="60" height="15" fill="#012169"/>
+                                <rect x="10" y="30" width="60" height="15" fill="#012169"/>
+                                <!-- Union Jack corner -->
+                                <rect x="10" y="15" width="25" height="15" fill="#012169"/>
+                                <path d="M10 15 L35 30 M35 15 L10 30" stroke="#fff" stroke-width="2"/>
+                                <path d="M22.5 15 L22.5 30 M10 22.5 L35 22.5" stroke="#fff" stroke-width="3"/>
+                                <path d="M22.5 15 L22.5 30 M10 22.5 L35 22.5" stroke="#C8102E" stroke-width="1"/>
+                                <!-- Stars -->
+                                <circle cx="55" cy="20" r="1.5" fill="#fff"/>
+                                <circle cx="60" cy="25" r="1.5" fill="#fff"/>
+                                <circle cx="55" cy="30" r="1.5" fill="#fff"/>
+                                <circle cx="50" cy="35" r="1.5" fill="#fff"/>
+                                <circle cx="45" cy="25" r="2" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <h4>Australian Made</h4>
+                        <p>We exclusively use Australian-made antennas from Hills, Matchmaster, and Digitek - brands specifically designed and tested for Australia's unique climate and broadcasting conditions.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 120px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="80" height="60" viewBox="0 0 80 60" fill="none">
+                                <!-- Coaxial cable cross-section -->
+                                <circle cx="40" cy="30" r="20" fill="#2c3e50"/>
+                                <circle cx="40" cy="30" r="16" fill="#ecf0f1"/>
+                                <circle cx="40" cy="30" r="12" fill="#34495e"/>
+                                <circle cx="40" cy="30" r="8" fill="#f39c12"/>
+                                <circle cx="40" cy="30" r="3" fill="#e74c3c"/>
+                                <!-- Labels -->
+                                <text x="15" y="10" fill="#7f8c8d" font-size="6" font-family="Arial">RG6</text>
+                                <text x="10" y="52" fill="#7f8c8d" font-size="6" font-family="Arial">QUAD SHIELD</text>
+                            </svg>
+                        </div>
+                        <h4>Quality Cabling</h4>
+                        <p>Premium RG6 quad-shield coaxial cable with thick center core for maximum signal integrity. Purpose-built for Australian conditions with UV-resistant outer jacket.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 120px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="80" height="60" viewBox="0 0 80 60" fill="none">
+                                <!-- Masthead amplifier -->
+                                <rect x="20" y="20" width="40" height="20" fill="#34495e" rx="3"/>
+                                <rect x="25" y="25" width="30" height="10" fill="#2c3e50" rx="2"/>
+                                <!-- Input/Output -->
+                                <rect x="15" y="28" width="8" height="4" fill="#3498db" rx="1"/>
+                                <rect x="57" y="28" width="8" height="4" fill="#e74c3c" rx="1"/>
+                                <!-- Gain control -->
+                                <circle cx="40" cy="30" r="3" fill="#f39c12"/>
+                                <rect x="38" y="28" width="4" height="1" fill="#2c3e50"/>
+                                <!-- Mounting bracket -->
+                                <rect x="35" y="40" width="10" height="8" fill="#7f8c8d"/>
+                                <circle cx="40" cy="44" r="1" fill="#2c3e50"/>
+                            </svg>
+                        </div>
+                        <h4>Top of the Range Amplifiers</h4>
+                        <p>Professional masthead and distribution amplifiers from leading manufacturers. Variable gain control, low noise figure, and excellent overload characteristics for optimal signal boosting in all conditions.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 120px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="80" height="60" viewBox="0 0 80 60" fill="none">
+                                <!-- Splitter -->
+                                <rect x="10" y="25" width="20" height="10" fill="#34495e" rx="2"/>
+                                <rect x="25" y="27" width="8" height="6" fill="#3498db"/>
+                                <!-- Output ports -->
+                                <rect x="35" y="20" width="8" height="4" fill="#e74c3c" rx="1"/>
+                                <rect x="35" y="30" width="8" height="4" fill="#e74c3c" rx="1"/>
+                                <rect x="35" y="36" width="8" height="4" fill="#e74c3c" rx="1"/>
+                                <!-- Filter -->
+                                <rect x="50" y="20" width="20" height="20" fill="#2c3e50" rx="3"/>
+                                <rect x="55" y="25" width="10" height="10" fill="#27ae60" rx="2"/>
+                                <text x="57" y="31" fill="#fff" font-size="6" font-family="Arial">4G</text>
+                            </svg>
+                        </div>
+                        <h4>Filters, Attenuators & Splitters</h4>
+                        <p>Premium filtering solutions including 4G/5G filters, band-pass filters, and variable attenuators. High-quality splitters and combiners with excellent isolation and low insertion loss for multi-TV installations.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 120px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="80" height="60" viewBox="0 0 80 60" fill="none">
+                                <!-- Professional assessment icon -->
+                                <rect x="15" y="20" width="50" height="20" fill="#3498db" rx="3"/>
+                                <rect x="20" y="25" width="40" height="10" fill="#2980b9" rx="2"/>
+                                <!-- Checklist -->
+                                <rect x="25" y="28" width="6" height="1" fill="#fff"/>
+                                <rect x="25" y="30" width="8" height="1" fill="#fff"/>
+                                <rect x="25" y="32" width="7" height="1" fill="#fff"/>
+                                <rect x="25" y="34" width="9" height="1" fill="#fff"/>
+                                <!-- Checkmarks -->
+                                <path d="M22 28 L23 29 L24 28" stroke="#27ae60" stroke-width="0.5" fill="none"/>
+                                <path d="M22 30 L23 31 L24 30" stroke="#27ae60" stroke-width="0.5" fill="none"/>
+                                <path d="M22 32 L23 33 L24 32" stroke="#27ae60" stroke-width="0.5" fill="none"/>
+                                <path d="M22 34 L23 35 L24 34" stroke="#27ae60" stroke-width="0.5" fill="none"/>
+                                <!-- Signal strength bars -->
+                                <rect x="45" y="32" width="2" height="3" fill="#27ae60"/>
+                                <rect x="48" y="30" width="2" height="5" fill="#27ae60"/>
+                                <rect x="51" y="28" width="2" height="7" fill="#27ae60"/>
+                                <rect x="54" y="26" width="2" height="9" fill="#27ae60"/>
+                                <rect x="57" y="24" width="2" height="11" fill="#27ae60"/>
+                                <!-- Professional tools -->
+                                <rect x="25" y="45" width="30" height="6" fill="#34495e" rx="2"/>
+                                <rect x="30" y="47" width="20" height="2" fill="#2c3e50"/>
+                                <circle cx="35" cy="48" r="1" fill="#e74c3c"/>
+                                <circle cx="45" cy="48" r="1" fill="#f39c12"/>
+                            </svg>
+                        </div>
+                        <h4>Professional Antenna Selection</h4>
+                        <p>Every installation begins with professional site assessment and signal testing. We choose the optimal antenna based on your location, signal strength, terrain, and local conditions - ensuring perfect reception with the right antenna for your specific needs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Antenna Selection Section -->
+            <section>
+                <h2 class="section-title">Our Premium Antenna Selection</h2>
+                <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">
+                    We carefully select from Australia's leading antenna manufacturers - Hills, Matchmaster, and Digitek. These brands represent the pinnacle of Australian antenna engineering, designed specifically for our unique climate and broadcasting environment.
+                </p>
+
+                <div class="antenna-grid">
+                    <div class="service-card">
+                        <div style="width: 100%; height: 200px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="200" height="160" viewBox="0 0 200 160" fill="none">
+                                <!-- Hills DY4 - Small 4 element VHF antenna -->
+                                <rect x="20" y="75" width="160" height="10" fill="#2c3e50" rx="2"/>
+                                <!-- 4 elements - small -->
+                                <rect x="40" y="60" width="3" height="40" fill="#34495e"/>
+                                <rect x="70" y="55" width="3" height="50" fill="#34495e"/>
+                                <rect x="100" y="50" width="3" height="60" fill="#34495e"/>
+                                <rect x="130" y="55" width="3" height="50" fill="#34495e"/>
+                                <!-- Mounting bracket -->
+                                <rect x="95" y="85" width="10" height="20" fill="#7f8c8d"/>
+                                <circle cx="100" cy="95" r="2" fill="#2c3e50"/>
+                                <!-- Label -->
+                                <text x="100" y="125" text-anchor="middle" fill="#2c3e50" font-size="12" font-family="Arial">DY4</text>
+                            </svg>
+                        </div>
+                        <h4>Hills DY4 VHF Antenna</h4>
+                        <p><strong>4 Element VHF (Channels 6-12)</strong></p>
+                        <p>Perfect for metropolitan areas, the Hills DY4 features F-Type connection for superior screening and integrated 4G low-pass filter. Built with BoomLock™ technology for exceptional durability in Australian conditions.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 200px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="200" height="160" viewBox="0 0 200 160" fill="none">
+                                <!-- Hills DY6 - Medium 6 element VHF antenna -->
+                                <rect x="10" y="75" width="180" height="10" fill="#2c3e50" rx="2"/>
+                                <!-- 6 elements - medium -->
+                                <rect x="30" y="65" width="3" height="30" fill="#34495e"/>
+                                <rect x="55" y="60" width="3" height="40" fill="#34495e"/>
+                                <rect x="80" y="55" width="3" height="50" fill="#34495e"/>
+                                <rect x="105" y="50" width="3" height="60" fill="#34495e"/>
+                                <rect x="130" y="55" width="3" height="50" fill="#34495e"/>
+                                <rect x="155" y="60" width="3" height="40" fill="#34495e"/>
+                                <!-- Mounting bracket -->
+                                <rect x="95" y="85" width="10" height="20" fill="#7f8c8d"/>
+                                <circle cx="100" cy="95" r="2" fill="#2c3e50"/>
+                                <!-- Label -->
+                                <text x="100" y="125" text-anchor="middle" fill="#2c3e50" font-size="12" font-family="Arial">DY6</text>
+                            </svg>
+                        </div>
+                        <h4>Hills DY6 VHF Antenna</h4>
+                        <p><strong>6 Element VHF Outer Prime (Channels 6-12)</strong></p>
+                        <p>The DY6 is ideal for areas just outside capital cities. Features wider bandwidth for digital reception, F-Type connection, and heavy-duty powder-coated construction designed for Australian weather.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 200px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="200" height="160" viewBox="0 0 200 160" fill="none">
+                                <!-- Hills DY10 - Large 10 element VHF antenna -->
+                                <rect x="5" y="75" width="190" height="10" fill="#2c3e50" rx="2"/>
+                                <!-- 10 elements - large -->
+                                <rect x="20" y="70" width="3" height="20" fill="#34495e"/>
+                                <rect x="35" y="65" width="3" height="30" fill="#34495e"/>
+                                <rect x="50" y="60" width="3" height="40" fill="#34495e"/>
+                                <rect x="65" y="55" width="3" height="50" fill="#34495e"/>
+                                <rect x="80" y="50" width="3" height="60" fill="#34495e"/>
+                                <rect x="95" y="45" width="3" height="70" fill="#34495e"/>
+                                <rect x="110" y="50" width="3" height="60" fill="#34495e"/>
+                                <rect x="125" y="55" width="3" height="50" fill="#34495e"/>
+                                <rect x="140" y="60" width="3" height="40" fill="#34495e"/>
+                                <rect x="155" y="65" width="3" height="30" fill="#34495e"/>
+                                <!-- Mounting bracket -->
+                                <rect x="95" y="85" width="10" height="20" fill="#7f8c8d"/>
+                                <circle cx="100" cy="95" r="2" fill="#2c3e50"/>
+                                <!-- Label -->
+                                <text x="100" y="125" text-anchor="middle" fill="#2c3e50" font-size="12" font-family="Arial">DY10</text>
+                            </svg>
+                        </div>
+                        <h4>Hills DY10 VHF Antenna</h4>
+                        <p><strong>10 Element VHF Inner Fringe (Channels 6-12)</strong></p>
+                        <p>High-gain antenna for semi-rural areas requiring extra signal strength. Features superior F-Type connection and robust aluminium construction. Perfect for challenging VHF reception areas.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 200px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="200" height="160" viewBox="0 0 200 160" fill="none">
+                                <!-- Hills Tru-Spec UHF - Medium UHF antenna -->
+                                <rect x="30" y="75" width="140" height="10" fill="#2c3e50" rx="2"/>
+                                <!-- UHF elements - shorter, more numerous -->
+                                <rect x="40" y="65" width="2" height="20" fill="#34495e"/>
+                                <rect x="50" y="60" width="2" height="30" fill="#34495e"/>
+                                <rect x="60" y="55" width="2" height="40" fill="#34495e"/>
+                                <rect x="70" y="50" width="2" height="50" fill="#34495e"/>
+                                <rect x="80" y="45" width="2" height="60" fill="#34495e"/>
+                                <rect x="90" y="40" width="2" height="70" fill="#34495e"/>
+                                <rect x="100" y="35" width="2" height="80" fill="#34495e"/>
+                                <rect x="110" y="40" width="2" height="70" fill="#34495e"/>
+                                <rect x="120" y="45" width="2" height="60" fill="#34495e"/>
+                                <rect x="130" y="50" width="2" height="50" fill="#34495e"/>
+                                <rect x="140" y="55" width="2" height="40" fill="#34495e"/>
+                                <rect x="150" y="60" width="2" height="30" fill="#34495e"/>
+                                <!-- Mounting bracket -->
+                                <rect x="95" y="85" width="10" height="20" fill="#7f8c8d"/>
+                                <circle cx="100" cy="95" r="2" fill="#2c3e50"/>
+                                <!-- Label -->
+                                <text x="100" y="125" text-anchor="middle" fill="#2c3e50" font-size="12" font-family="Arial">TRU-SPEC</text>
+                            </svg>
+                        </div>
+                        <h4>Hills Tru-Spec UHF Antenna</h4>
+                        <p><strong>Premium UHF Yagi (Channels 28-51)</strong></p>
+                        <p>The latest evolution in UHF antennas, featuring BoomLock™ technology, ultrasonically sealed balun housing, and PCB balun for true impedance matching. Designed and manufactured in Australia with lifetime warranty.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 200px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="200" height="160" viewBox="0 0 200 160" fill="none">
+                                <!-- Matchmaster Phased Array - Large square antenna -->
+                                <rect x="40" y="40" width="120" height="80" fill="#34495e" rx="5"/>
+                                <rect x="45" y="45" width="110" height="70" fill="#2c3e50" rx="3"/>
+                                <!-- Phased array elements -->
+                                <rect x="55" y="55" width="15" height="3" fill="#3498db"/>
+                                <rect x="75" y="55" width="15" height="3" fill="#3498db"/>
+                                <rect x="95" y="55" width="15" height="3" fill="#3498db"/>
+                                <rect x="115" y="55" width="15" height="3" fill="#3498db"/>
+                                <rect x="135" y="55" width="15" height="3" fill="#3498db"/>
+                                
+                                <rect x="55" y="65" width="15" height="3" fill="#3498db"/>
+                                <rect x="75" y="65" width="15" height="3" fill="#3498db"/>
+                                <rect x="95" y="65" width="15" height="3" fill="#3498db"/>
+                                <rect x="115" y="65" width="15" height="3" fill="#3498db"/>
+                                <rect x="135" y="65" width="15" height="3" fill="#3498db"/>
+                                
+                                <rect x="55" y="75" width="15" height="3" fill="#3498db"/>
+                                <rect x="75" y="75" width="15" height="3" fill="#3498db"/>
+                                <rect x="95" y="75" width="15" height="3" fill="#3498db"/>
+                                <rect x="115" y="75" width="15" height="3" fill="#3498db"/>
+                                <rect x="135" y="75" width="15" height="3" fill="#3498db"/>
+                                
+                                <rect x="55" y="85" width="15" height="3" fill="#3498db"/>
+                                <rect x="75" y="85" width="15" height="3" fill="#3498db"/>
+                                <rect x="95" y="85" width="15" height="3" fill="#3498db"/>
+                                <rect x="115" y="85" width="15" height="3" fill="#3498db"/>
+                                <rect x="135" y="85" width="15" height="3" fill="#3498db"/>
+                                
+                                <rect x="55" y="95" width="15" height="3" fill="#3498db"/>
+                                <rect x="75" y="95" width="15" height="3" fill="#3498db"/>
+                                <rect x="95" y="95" width="15" height="3" fill="#3498db"/>
+                                <rect x="115" y="95" width="15" height="3" fill="#3498db"/>
+                                <rect x="135" y="95" width="15" height="3" fill="#3498db"/>
+                                
+                                <rect x="55" y="105" width="15" height="3" fill="#3498db"/>
+                                <rect x="75" y="105" width="15" height="3" fill="#3498db"/>
+                                <rect x="95" y="105" width="15" height="3" fill="#3498db"/>
+                                <rect x="115" y="105" width="15" height="3" fill="#3498db"/>
+                                <rect x="135" y="105" width="15" height="3" fill="#3498db"/>
+                                
+                                <!-- Mounting bracket -->
+                                <rect x="95" y="120" width="10" height="15" fill="#7f8c8d"/>
+                                <circle cx="100" cy="127" r="2" fill="#2c3e50"/>
+                                <!-- Label -->
+                                <text x="100" y="145" text-anchor="middle" fill="#2c3e50" font-size="10" font-family="Arial">PHASED ARRAY</text>
+                            </svg>
+                        </div>
+                        <h4>Matchmaster Phased Array</h4>
+                        <p><strong>High-Gain Phased Array (Channels 28-51)</strong></p>
+                        <p>German-engineered, Australian-assembled phased array antenna with 12dB gain. Features built-in 4G/5G filter, IP66 balun casing for coastal areas, and Dacromet finish for superior corrosion resistance.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div style="width: 100%; height: 200px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 2px solid #e9ecef;">
+                            <svg width="200" height="160" viewBox="0 0 200 160" fill="none">
+                                <!-- Satellite Dish -->
+                                <ellipse cx="100" cy="80" rx="80" ry="30" fill="#34495e"/>
+                                <ellipse cx="100" cy="80" rx="70" ry="25" fill="#2c3e50"/>
+                                <ellipse cx="100" cy="80" rx="60" ry="20" fill="#ecf0f1"/>
+                                <ellipse cx="100" cy="80" rx="50" ry="15" fill="#bdc3c7"/>
+                                <ellipse cx="100" cy="80" rx="40" ry="12" fill="#95a5a6"/>
+                                <ellipse cx="100" cy="80" rx="30" ry="9" fill="#7f8c8d"/>
+                                <ellipse cx="100" cy="80" rx="20" ry="6" fill="#2c3e50"/>
+                                <!-- LNB -->
+                                <rect x="95" y="60" width="10" height="15" fill="#3498db" rx="2"/>
+                                <rect x="97" y="75" width="6" height="8" fill="#2980b9"/>
+                                <!-- Support arm -->
+                                <rect x="99" y="75" width="2" height="20" fill="#34495e"/>
+                                <!-- Mount -->
+                                <rect x="95" y="110" width="10" height="20" fill="#7f8c8d"/>
+                                <circle cx="100" cy="120" r="2" fill="#2c3e50"/>
+                                <!-- Label -->
+                                <text x="100" y="140" text-anchor="middle" fill="#2c3e50" font-size="10" font-family="Arial">VAST/FOXTEL</text>
+                            </svg>
+                        </div>
+                        <h4>VAST/Foxtel Satellite Dish</h4>
+                        <p><strong>Satellite TV Reception (Ku-Band)</strong></p>
+                        <p>Professional satellite dish installation for VAST free-to-air and Foxtel Pay-TV services. Features premium LNB, precision alignment, and weatherproof connections. Australia-wide coverage with consistent reception regardless of location or terrain.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Information -->
+            <div class="brand-info">
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">About Our Chosen Brands</h3>
+                <div class="brand-grid">
+                    <div class="brand-item">
+                        <h4>Hills Antennas</h4>
+                        <p>Australia's most trusted antenna brand with over 70 years of experience. Hills antennas feature their patented BoomLock™ technology and are designed specifically for Australian digital television. All Hills antennas come with a lifetime warranty and are built to withstand our harsh climate.</p>
+                    </div>
+                    <div class="brand-item">
+                        <h4>Matchmaster</h4>
+                        <p>Premium German-engineered antennas, assembled in Australia. Matchmaster specializes in phased array technology with superior gain and interference rejection. Their antennas feature IP66 rated baluns and are perfect for coastal and challenging reception areas.</p>
+                    </div>
+                    <div class="brand-item">
+                        <h4>Digitek</h4>
+                        <p>Australian-owned company manufacturing heavy-duty digital antennas with 12mm extruded aluminium elements. Digitek antennas feature UV-stabilized plastics, stainless steel hardware, and bifurcated rivets - the strongest in the industry. All built for Australian conditions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div style="text-align: center; background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 3rem;">
+                <h3 style="color: #2c3e50; margin-bottom: 2rem;">Ready to Get Started?</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Contact Taylors Antenna Service today for professional antenna installation using only the highest quality materials and equipment.</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <div>
+                        <strong>📞 Phone:</strong><br>
+                        <a href="tel:0421023718" style="color: #3498db; text-decoration: none; font-size: 1.2rem;">0421 023 718</a>
+                    </div>
+                    <div>
+                        <strong>✉️ Email:</strong><br>
+                        <a href="mailto:taylorsantennas@gmail.com" style="color: #3498db; text-decoration: none;">taylorsantennas@gmail.com</a>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="index.html#contact" class="back-button">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Taylors Antenna Service. All rights reserved. | Professional antenna installation services | ABN: 27 406 545 129</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                Local business serving the community with care | Professional workmanship to the highest standard | All work guaranteed
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+                header.style.borderBottom = '2px solid rgba(255, 255, 255, 0.2)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c3e50, #3498db)';
+                header.style.backdropFilter = 'none';
+                header.style.borderBottom = '2px solid rgba(255, 255, 255, 0.3)';
+            }
+        });
+
+        // Add some interactive animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards for animations
+        document.querySelectorAll('.service-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>="#3498db"/>
+                                <rect x="75" y="95" width="15" height="3" fill="#3498db"/>
+                                <rect x="95" y="95" width="15" height="3" fill

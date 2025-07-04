@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fair and transparent pricing for professional antenna installation services. Digital TV antennas from $300, Starlink installation from $350, amplifiers from $200. No hidden costs.">
+    <meta name="keywords" content="antenna installation cost, TV antenna price, Starlink installation cost, amplifier installation, fair pricing">
+    <title>Fair & Transparent Pricing - Taylors Antenna Service</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: "📡";
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ecf0f1;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            padding: 4rem 0;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #27ae60;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            color: #555;
+        }
+
+        /* Trust Badge */
+        .trust-badge {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 4rem;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.2);
+        }
+
+        .trust-badge h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .trust-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .trust-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+
+        .pricing-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ecf0f1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        /* Special Pricing Cards */
+        .popular-card {
+            border: 3px solid #3498db;
+            transform: scale(1.05);
+        }
+
+        .popular-card::before {
+            height: 6px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: #3498db;
+            color: white;
+            padding: 0.5rem 2rem;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Additional Costs Section */
+        .additional-costs {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 4rem;
+        }
+
+        .additional-costs h3 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .cost-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .cost-item {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #f39c12;
+        }
+
+        .cost-item h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .cost-item p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Payment Methods */
+        .payment-section {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .payment-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .payment-method {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 4rem;
+        }
+
+        .faq-section h3 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .faq-item h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-item p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #2c3e50;
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .popular-card {
+                transform: none;
+            }
+
+            .payment-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .trust-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Taylors Antenna Service</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-button">← Back to Home</a>
+            
+            <h1 class="page-title">Fair & Transparent Pricing</h1>
+            <p class="page-subtitle">Professional Workmanship • No Hidden Costs • All Work Guaranteed</p>
+            
+            <div class="intro-text">
+                <p>At Taylors Antenna Service, we believe in honest, upfront pricing with no surprises. Our rates are fair and competitive, reflecting the quality materials and professional workmanship you deserve. Every job is different, but here's a clear guide to our standard pricing structure.</p>
+            </div>
+
+            <!-- Trust Badge -->
+            <div class="trust-badge">
+                <h3>🏆 Your Peace of Mind Guarantee</h3>
+                <div class="trust-features">
+                    <div class="trust-feature">
+                        <span>✅</span>
+                        <span>All work guaranteed</span>
+                    </div>
+                    <div class="trust-feature">
+                        <span>💰</span>
+                        <span>Fair rates, no hidden costs</span>
+                    </div>
+                    <div class="trust-feature">
+                        <span>🏠</span>
+                        <span>Local business, personal service</span>
+                    </div>
+                    <div class="trust-feature">
+                        <span>⚡</span>
+                        <span>Same-day service available</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Pricing Grid -->
+            <div class="pricing-grid">
+                <!-- Digital Antenna Installation -->
+                <div class="pricing-card popular-card">
+                    <div class="popular-badge">POPULAR</div>
+                    <span class="pricing-icon">📡</span>
+                    <h3>Digital TV Antenna Installation</h3>
+                    <div class="price">$320</div>
+                    <div class="price-note">Standard metropolitan installation</div>
+                    <ul class="pricing-features">
+                        <li>Site assessment</li>
+                        <li>Premium Australian-made antenna</li>
+                        <li>Quality mounting hardware</li>
+                        <li>Signal testing & optimization</li>
+                        <li>All work guaranteed</li>
+                    </ul>
+                </div>
+
+                <!-- Fringe Antenna Installation -->
+                <div class="pricing-card">
+                    <span class="pricing-icon">🔍</span>
+                    <h3>Fringe Area Antenna Installation</h3>
+                    <div class="price">$390</div>
+                    <div class="price-note">High-gain antenna for challenging areas</div>
+                    <ul class="pricing-features">
+                        <li>Specialized high-gain antenna</li>
+                        <li>Enhanced signal reception</li>
+                        <li>Optimal positioning for your location</li>
+                        <li>Signal strength testing</li>
+                        <li>Perfect for rural & fringe areas</li>
+                    </ul>
+                </div>
+
+                <!-- Amplifier Installation -->
+                <div class="pricing-card">
+                    <span class="pricing-icon">📶</span>
+                    <h3>Amplifier Installation</h3>
+                    <div class="price">$200</div>
+                    <div class="price-note">Boosts weak signals</div>
+                    <ul class="pricing-features">
+                        <li>Professional masthead amplifier</li>
+                        <li>Variable gain control</li>
+                        <li>Low noise, high performance</li>
+                        <li>Weather-resistant housing</li>
+                        <li>Power supply included</li>
+                        <li>Signal optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Starlink Installation -->
+                <div class="pricing-card">
+                    <span class="pricing-icon">🛰️</span>
+                    <h3>Starlink Installation</h3>
+                    <div class="price">$350</div>
+                    <div class="price-note">Includes mounting hardware</div>
+                    <ul class="pricing-features">
+                        <li>Professional dish installation</li>
+                        <li>Premium mounting hardware</li>
+                        <li>Cable routing & connections</li>
+                        <li>Network setup & testing</li>
+                        <li>Weatherproof installation</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Diagnostic Visit -->
+                <div class="pricing-card">
+                    <span class="pricing-icon">🔧</span>
+                    <h3>Diagnostic Visit</h3>
+                    <div class="price">$100</div>
+                    <div class="price-note">Problem diagnosis & advice</div>
+                    <ul class="pricing-features">
+                        <li>Signal testing</li>
+                        <li>System assessment</li>
+                        <li>Problem identification</li>
+                        <li>Repair recommendations</li>
+                        <li>Travel costs covered</li>
+                        <li>If we cannot fix the problem there are no fees at all</li>
+                    </ul>
+                </div>
+
+                <!-- Satellite TV Installation -->
+                <div class="pricing-card">
+                    <span class="pricing-icon">📺</span>
+                    <h3>Satellite TV Installation</h3>
+                    <div class="price">From $950</div>
+                    <div class="price-note">VAST/Foxtel satellite services</div>
+                    <ul class="pricing-features">
+                        <li>Professional dish alignment</li>
+                        <li>Premium satellite dish</li>
+                        <li>LNB setup & configuration</li>
+                        <li>Cable installation</li>
+                        <li>Receiver connection</li>
+                        <li>Signal optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Costs Information -->
+            <div class="additional-costs">
+                <h3>⏰ If ever there is additional Costs</h3>
+                <div class="cost-grid">
+                    <div class="cost-item">
+                        <h4>Extended Jobs (Over 2 Hours)</h4>
+                        <p>If your installation takes longer than 2 hours, we charge our standard hourly rate plus materials.</p>
+                    </div>
+                    <div class="cost-item">
+                        <h4>Why jobs can sometimes take longer</h4>
+                        <p>Jobs requiring extensive cable runs through walls, high roof access, or challenging terrain etc, even complex Installations very rarely take longer than 3 hours.</p>
+                    </div>
+                    <div class="cost-item">
+                        <h4>travel Time</h4>
+                        <p>Were happy to travel and if your within 30 minutes from out location there is no travel fee. after that we charge $60 per hour for travel time.</p>
+                    </div>
+                    <div class="cost-item">
+                        <h4>Materials & Hardware</h4>
+                        <p>All standard materials and mounting hardware are included in our pricing. We only use premium Australian-made components for lasting performance. If however the job falls into an hourly rate charge we charge low rates for the materials we use. </p>
+                    </div>
+                    <div class="cost-item">
+                        <h4>Antenna Pricing</h4>
+                        <p> *4 element digital antenna $60<br>
+                            *6 element digitalantenna $80<br>
+                            *Fringe area antenna $100<br>
+                            *Starlink Mounting $120<br>
+                            *Satellite TV/Vast $650</p>
+                    </div>
+                                        <div class="cost-item">
+                        <h4>Material Costs</h4>
+                        <p> *Tripod roof mount $45<br>
+                            *Large Tripod mount $85<br>
+                            *RG6 Coax Cable $2 per metre<br>
+                            *Amplifier $80<br>
+                            *Wall Socket $10<br>
+                            *F type connector $2<br>
+                            *Splitters $10-$25<br>
+                            *Attenuators $5-$20<br>	
+
+
+                </div>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="payment-section">
+                <h3>💳 Easy Payment Options</h3>
+                <p>We make payment simple and convenient. Pay on completion of work with your preferred method:</p>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <span>💵</span>
+                        <span>Cash</span>
+                    </div>
+                    <div class="payment-method">
+                        <span>💳</span>
+                        <span>Credit/Debit Card</span>
+                    </div>
+                    <div class="payment-method">
+                        <span>📱</span>
+                        <span>Square App</span>
+                    </div>
+                    <div class="payment-method">
+                        <span>🏦</span>
+                        <span>Bank Transfer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h3>❓ Common Pricing Questions</h3>
+                
+                <div class="faq-item">
+                    <h4>Do you provide free quotes?</h4>
+                    <p>Yes! We provide free, no-obligation quotes for all installations. For complex jobs, we may need to visit your site to provide an accurate quote - this diagnostic visit is $100 but is deducted from your final bill if you proceed with the work.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Are there any hidden costs?</h4>
+                    <p>Never! Our pricing is completely transparent. All standard materials, mounting hardware, and installation are included in our quoted prices. Any additional costs will be discussed and approved by you before we proceed.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What's included in the installation price?</h4>
+                    <p>Our installation prices include the antenna or equipment, premium mounting hardware, professional installation, cable connections, signal testing, and optimization. We guarantee all our work for years to come.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Do you offer payment plans?</h4>
+                    <p>For larger jobs, we're happy to discuss payment arrangements. Contact us to discuss your specific needs - we're here to help make quality antenna installation affordable.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if I need repairs later?</h4>
+                    <p>All our work is guaranteed. If you experience any issues with our installation, we'll return to fix it at no charge. We stand behind our work because we take pride in getting it right the first time.</p>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h3>📞 Get Your Free Quote Today</h3>
+                <p>Ready to get perfect reception? Contact us for a free, no-obligation quote. We're here to help with all your antenna needs.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>📞 Call or Text</h4>
+                        <a href="tel:0421023718">0421 023 718</a>
+                        <p>Call or text anytime</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>✉️ Email</h4>
+                        <a href="mailto:taylorsantennas@gmail.com">taylorsantennas@gmail.com</a>
+                        <p>Quick response guaranteed</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>🌐 Online</h4>
+                        <a href="index.html#contact">Request Quote</a>
+                        <p>Fill out our contact form</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Taylors Antenna Service. All rights reserved. | Professional antenna installation services | ABN: 27 406 545 129</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                Local business serving the community with care | Professional workmanship to the highest standard | All work guaranteed
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+                header.style.borderBottom = '2px solid rgba(255, 255, 255, 0.2)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c3e50, #3498db)';
+                header.style.backdropFilter = 'none';
+                header.style.borderBottom = '2px solid rgba(255, 255, 255, 0.3)';
+            }
+        });
+
+        // Add animation to pricing cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe pricing cards for animations
+        document.querySelectorAll('.pricing-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
