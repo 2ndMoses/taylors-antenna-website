@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional antenna installation Eastern Shore, Sorell, Tasman Peninsula    , Dodges Ferry Tasmania. Expert TV antenna, Starlink, satellite installation. Local technician, same-day service, guaranteed work.">
-    <meta name="keywords" content="antenna installation Eastern Shore, antenna installer Sorell, TV antenna Tasman Peninsula   , Starlink installation Dodges Ferry, antenna repair Carlton, reception repair Eaglehawk Neck, antenna installer Tasmania">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="description" content="Professional Antenna Installation Eastern Shore, Sorell, Tasman Peninsula. TV Reception Repairs, Starlink, satellite installation. Local technician, same-day service, guaranteed work.">
+    <meta name="keywords" content="antenna installation Eastern Shore, antenna installer Sorell, TV antenna Repair Tasman Peninsula, Starlink installation, Foxtel/VAST installation and Repair, reception repair Eaglehawk Neck, antenna installer Tasmania">
     <title>Antenna Installation Eastern Shore, Sorell, Tasman Peninsula     TAS | Professional TV Antenna Service | Taylors Antenna Service</title>
     
     <!-- SCHEMA MARKUP FOR TAYLORS ANTENNA SERVICE -->
@@ -273,6 +273,10 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -322,6 +326,7 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            transition: all 0.3s ease;
         }
 
         .nav-links a {
@@ -339,24 +344,32 @@
             background: none;
             border: none;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             cursor: pointer;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu:active {
+            transform: scale(0.95);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(25, 42, 86, 0.7), rgba(244, 125, 72, 0.5)), 
+            background: linear-gradient(135deg, rgba(25, 42, 86, 0.8), rgba(244, 125, 72, 0.6)), 
                         url('images/Headerantennainstall.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            height: 60vh;
-            min-height: 500px;
+            min-height: 80vh;
+            height: auto;
             display: flex;
             align-items: center;
             text-align: center;
             color: white;
             position: relative;
+            margin-top: 80px;
+            padding: 6rem 0;
         }
 
         .hero::before {
@@ -377,13 +390,20 @@
 
         .hero-content h1 {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
             animation: fadeInUp 1s ease-out;
         }
 
         .hero-content p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
             animation: fadeInUp 1s ease-out 0.2s both;
         }
 
@@ -696,7 +716,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Professional Antenna Installation Eastern Shore & Southeast Tasmania</h1>
-                <p>Expert antenna installation serving Eastern Shore, Tasman Peninsula, Sorell, Dodges Ferry, Carlton, Primrose Sands, Eaglehawk Neck etc. Professional workmanship to the highest standard, guaranteed work, fair rates. Your local antenna specialist with same-day service available.</p>
+                <p>Expert antenna installation and repair serving the Eastern Shore, Tasman Peninsula, Bellerive, Sorell, Dodges Ferry, Primrose Sands, Eaglehawk Neck etc. Professional workmanship to the highest standard, guaranteed work, fair rates. Your local antenna specialist with same-day service available.</p>
                 <a href="#contact" class="cta-button">Get Perfect Reception Today</a>
             </div>
         </div>
