@@ -411,20 +411,25 @@
         @media (max-width: 768px) {
             .hero {
                 min-height: 60vh;
-                padding: 4rem 0;
+                padding: 5rem 0 4rem 0; /* Increased top padding to push content down */
                 background-size: cover;
                 background-position: center center;
+                margin-top: 80px; /* Ensure margin-top is maintained */
+            }
+
+            .hero-content {
+                padding-top: 1rem; /* Additional padding to push content down further */
             }
 
             .hero-content h1 {
                 font-size: 2.2rem;
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem; /* Increased margin for better spacing */
                 line-height: 1.1;
             }
 
             .hero-content p {
                 font-size: 1rem;
-                margin-bottom: 2rem;
+                margin-bottom: 2.5rem; /* Increased margin for better spacing */
                 padding: 0 1rem;
             }
         }
@@ -432,19 +437,23 @@
         /* Even smaller screens (phones in portrait) */
         @media (max-width: 480px) {
             .hero {
-                min-height: 50vh;
-                padding: 3rem 0;
+                min-height: 60vh;
+                padding: 5rem 0 3rem 0; /* Increased top padding */
+            }
+
+            .hero-content {
+                padding-top: 1.5rem; /* More padding for smaller screens */
             }
 
             .hero-content h1 {
                 font-size: 1.8rem;
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem;
             }
 
             .hero-content p {
                 font-size: 0.9rem;
                 line-height: 1.5;
-                margin-bottom: 1.5rem;
+                margin-bottom: 2rem;
             }
 
             .cta-button {
@@ -528,6 +537,31 @@
             background: white;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* About section mobile layout */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            /* Force image to appear first on mobile */
+            .about-image {
+                order: -1; /* This makes the image appear before the text */
+                margin-bottom: 1rem;
+            }
+
+            .about-text {
+                order: 1; /* This ensures text comes after image */
+            }
+
+            .about-image img {
+                width: 100%;
+                max-width: 300px; /* Smaller on mobile */
+                height: auto;
+                margin: 0 auto; /* Center the image */
+            }
         }
 
         /* Gallery */
@@ -928,7 +962,7 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Taylors Antenna Service - Your Local Tasmania Antenna Specialists</h2>
+            <h2 class="section-title">Taylors Antenna Service - Your Local Tasmanian Antenna Technician</h2>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Your Local Antenna Specialists Serving Southeast Tasmania</h3>
