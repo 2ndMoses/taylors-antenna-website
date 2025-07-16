@@ -540,23 +540,43 @@
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+                text-align: center; /* Center align all text */
             }
 
             /* Force image to appear first on mobile */
             .about-image {
-                order: -1; /* This makes the image appear before the text */
-                margin-bottom: 1rem;
+                order: -1;
+                margin: 0 auto 2rem; /* Center the image with more bottom margin */
+                max-width: 100%;
             }
 
             .about-text {
-                order: 1; /* This ensures text comes after image */
+                order: 1;
+                text-align: center; /* Center align the text */
+                margin: 0 auto; /* Center the text container */
+                max-width: 90%; /* Slightly narrower for better readability */
+            }
+
+            .about-text h3,
+            .about-text h4 {
+                text-align: center; /* Ensure headings are centered */
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-text ul {
+                text-align: left; /* Keep list items left-aligned for readability */
+                display: inline-block; /* Center the list */
+                margin: 1rem auto; /* Center the list */
+                padding-left: 1.5rem; /* Add some left padding for bullet points */
             }
 
             .about-image img {
                 width: 100%;
-                max-width: 300px; /* Smaller on mobile */
+                max-width: 300px;
                 height: auto;
-                margin: 0 auto; /* Center the image */
+                margin: 0 auto;
+                display: block; /* Ensure proper centering */
             }
         }
 
